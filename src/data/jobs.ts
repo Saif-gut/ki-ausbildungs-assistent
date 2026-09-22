@@ -1,0 +1,70 @@
+import { Job } from '@/types';
+
+export const jobs: Job[] = [
+  {
+    id: 'fachinformatiker-systemintegration',
+    title: 'Fachinformatiker/in für Systemintegration',
+    company: 'Nordwerk Digital GmbH',
+    location: 'Hamburg',
+    distance: '4,2 km',
+    start: '01.08.2027',
+    logo: 'ND',
+    color: '#DDF4EC',
+    tags: ['IT', '3 Jahre', 'Hybrid'],
+    summary: 'Du planst und betreust IT-Systeme, hilfst Kolleginnen und Kollegen bei technischen Fragen und arbeitest an modernen Cloud-Lösungen.',
+    tasks: ['Arbeitsplätze und Netzwerke einrichten', 'Fehler analysieren und lösen', 'Cloud-Dienste betreuen', 'Nutzer verständlich beraten'],
+    salary: 'Beispiel laut Anzeige: 1.180 € / 1.280 € / 1.400 € brutto pro Monat. Angaben vor Bewerbung an der Originalquelle prüfen.',
+    future: 'Mögliche Wege sind Spezialisierungen in Cloud, IT-Sicherheit oder Netzwerken sowie Weiterbildungen zum Operative Professional.',
+    requirements: [
+      { label: 'Mittlerer Schulabschluss', state: 'met', evidence: 'Im Profil: Realschulabschluss' },
+      { label: 'Interesse an IT und Technik', state: 'met', evidence: 'Im Profil: PC-Hardware und Programmieren' },
+      { label: 'Gute Deutschkenntnisse', state: 'met', evidence: 'Im Profil: Deutsch (Muttersprache)' },
+      { label: 'Erste praktische IT-Erfahrung', state: 'open', evidence: 'Noch kein konkretes Projekt beschrieben' },
+    ],
+  },
+  {
+    id: 'kaufmann-ecommerce',
+    title: 'Kaufmann/-frau im E-Commerce',
+    company: 'Hanseatic Home AG',
+    location: 'Hamburg',
+    distance: '7,8 km',
+    start: '01.09.2027',
+    logo: 'HH',
+    color: '#E8EEFA',
+    tags: ['Handel', '3 Jahre', 'Online-Shop'],
+    summary: 'Du pflegst Produkte im Online-Shop, analysierst Verkäufe und planst digitale Marketingaktionen im Team.',
+    tasks: ['Produkte online präsentieren', 'Kennzahlen auswerten', 'Kundschaft beraten', 'Online-Marketing unterstützen'],
+    salary: 'Die Anzeige nennt keine Vergütung. Frage das Unternehmen oder prüfe den geltenden Tarifvertrag.',
+    future: 'Nach der Ausbildung sind Tätigkeiten in Shop-Management, Online-Marketing, Einkauf oder Datenanalyse möglich.',
+    requirements: [
+      { label: 'Mittlerer Schulabschluss', state: 'met', evidence: 'Im Profil: Realschulabschluss' },
+      { label: 'Gute Mathematikkenntnisse', state: 'open', evidence: 'Keine Note im Profil hinterlegt' },
+      { label: 'Interesse an digitalen Trends', state: 'met', evidence: 'Im Profil: Technik und Social Media' },
+      { label: 'Sehr gutes schriftliches Deutsch', state: 'open', evidence: 'Noch kein Nachweis hinterlegt' },
+    ],
+  },
+  {
+    id: 'mechatroniker',
+    title: 'Mechatroniker/in',
+    company: 'Elbtechnik Werke',
+    location: 'Norderstedt',
+    distance: '13 km',
+    start: '01.08.2027',
+    logo: 'EW',
+    color: '#FFF0D7',
+    tags: ['Technik', '3,5 Jahre', 'Werkstatt'],
+    summary: 'Du baust mechanische und elektronische Komponenten zusammen und hältst komplexe Anlagen am Laufen.',
+    tasks: ['Anlagen montieren', 'Schaltungen messen', 'Maschinen warten', 'Fehler systematisch beheben'],
+    salary: 'Beispiel laut Anzeige: ab 1.230 € brutto im ersten Ausbildungsjahr. Die tatsächliche Vergütung kann abweichen.',
+    future: 'Mögliche Wege führen in Instandhaltung, Automatisierung und Produktion oder zur Weiterbildung als Techniker/in oder Meister/in.',
+    requirements: [
+      { label: 'Mittlerer Schulabschluss', state: 'met', evidence: 'Im Profil: Realschulabschluss' },
+      { label: 'Handwerkliches Geschick', state: 'open', evidence: 'Im Profil noch nicht beschrieben' },
+      { label: 'Interesse an Technik', state: 'met', evidence: 'Im Profil: PC-Hardware' },
+      { label: 'Praktikum im technischen Bereich', state: 'missing', evidence: 'Im Profil ist ein Einzelhandelspraktikum eingetragen' },
+    ],
+  },
+];
+
+export const getJob = (id?: string) => jobs.find((job) => job.id === id) ?? jobs[0];
+
